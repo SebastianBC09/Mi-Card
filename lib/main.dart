@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color(0xFF3F4F5E),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Pacifico',
                   fontSize: 40.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Color(0xFFE0E0E8),
                 ),
               ),
               Text(
@@ -34,57 +35,48 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Source',
                   fontSize: 20.0,
-                  color: Colors.teal[100],
+                  color: Color(0xFFE0E0E8),
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                color: Colors.white,
+              Divider(
+                color: Color(0xFFA5A5D5),
+                indent: 100.0,
+                endIndent: 100.0,
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Color(0xFF3F4F5E),
+                  ),
+                  title: Text(
+                    '+57 (316) 886-0994',
+                    style: TextStyle(
+                      fontFamily: 'Source',
+                      fontSize: 20.0,
+                      color: Color(0xFFA5A5D5),
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+57 (316) 886-0994',
-                      style: TextStyle(
-                        fontFamily: 'Source',
-                        fontSize: 20.0,
-                        color: Colors.teal.shade900,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Color(0xFF3F4F5E),
+                  ),
+                  title: Text(
+                    'sebastian.ballenc@protonmail.com',
+                    style: TextStyle(
+                      fontFamily: 'Source',
+                      fontSize: 14.0,
+                      color: Color(0xFFA5A5D5),
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'sebastian.ballenc@protonmail.com',
-                      style: TextStyle(
-                        fontFamily: 'Source',
-                        fontSize: 17.0,
-                        color: Colors.teal.shade900,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
