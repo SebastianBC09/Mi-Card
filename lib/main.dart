@@ -13,32 +13,55 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Container(
-                width: 100.0,
-                color: Colors.red,
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage:
+                AssetImage('assets/images/Crop Photo LinkedIn.jpeg'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.yellow.withOpacity(0.3),
-                  ),
-                ],
+              Text(
+                'Sebastien Ballen',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                'REACT & FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source',
+                  fontSize: 20.0,
+                  color: Colors.teal[100],
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Container(
-                width: 100.0,
-                color: Colors.blue,
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+57 (316) 886-0994',
+                      style: TextStyle(
+                        fontFamily: 'Source',
+                        fontSize: 20.0,
+                        color: Colors.teal.shade900,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ],
           ),
